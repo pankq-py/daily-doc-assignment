@@ -1,0 +1,34 @@
+div.elem-group {
+    margin: 20px 0;
+}
+
+input,
+option,
+select {
+    border: 2px solid #8e44ad;
+    background: none;
+
+}
+
+.right {
+    text-align: 'right'
+}
+
+hr {
+    border: 1px dotted #ccc;
+}
+
+button {
+    height: 50px;
+    background: #8e44ad;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #2980b9;
+}
+
+button:hover {
+    border: 2px solid #8e44ad;
+    background: #2980b9;
+}

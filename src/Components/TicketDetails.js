@@ -39,9 +39,9 @@ export const TicketDetails = (props) => {
 
 
   useEffect(() => {
-    var tempArr = [];
     const quantitiesOfTickets = JSON.parse(localStorage.getItem('Quantities of tickets'));
     if (quantitiesOfTickets) {
+      var tempArr = [];
       // quantitiesOfTickets.basic
       setQuantities(quantitiesOfTickets);
       for (let i = 0; i < quantities.basic; i++) {
@@ -67,8 +67,7 @@ export const TicketDetails = (props) => {
       }
       setTicketArr(tempArr);
     }
-    // setTicketsArray();
-  },[]);
+  },);
 
   return (
     <>
@@ -83,9 +82,9 @@ export const TicketDetails = (props) => {
           </thead>
           <tbody>
             {ticketArr.map(
-              (item, i) => (<tr onMouseOver={''}>
-                <td><input type="text" id='fname' placeholder='First Name' defaultValue={item.fname} onChange={() => { }} /></td>
-                <td><input type="text" id='lname' placeholder='Last Name' defaultValue={item.fname} onChange={() => { }} /></td>
+              (item, i) => (<tr>
+                <td><input type="text" id='fname' placeholder='First Name' defaultValue={item.fname} /></td>
+                <td><input type="text" id='lname' placeholder='Last Name' defaultValue={item.fname} /></td>
                 <td><input type='text' id='ticket' value={item.ticket} /></td>
               </tr>
               )
